@@ -1,0 +1,25 @@
+10:39:35,223 <com.generator.system.core.main.StarWebApplication>  INFO [main]: Starting StarWebApplication on AAA with PID 17136 (started by arthur in D:\Workspaces\MyEclipse 2015\spring-boot-sample-web-jsp)
+10:39:35,239 <com.generator.system.core.main.StarWebApplication>  INFO [main]: The following profiles are active: dev
+10:39:50,062 <com.generator.system.core.main.StarWebApplication>  INFO [main]: 当前环境: dev_envrimont
+10:39:50,062 <com.generator.system.core.main.StarWebApplication>  INFO [main]: db连接正常关闭
+10:39:50,064 <com.generator.system.core.main.StarWebApplication>  INFO [main]: Started StarWebApplication in 15.298 seconds (JVM running for 16.802)
+10:51:57,853 <com.generator.system.core.main.StarWebApplication>  INFO [main]: Starting StarWebApplication on AAA with PID 16852 (started by arthur in D:\Workspaces\MyEclipse 2015\spring-boot-sample-web-jsp)
+10:51:57,855 <com.generator.system.core.main.StarWebApplication>  INFO [main]: The following profiles are active: dev
+10:52:08,649 <com.generator.system.core.main.StarWebApplication>  INFO [main]: 当前环境: dev_envrimont
+10:52:08,650 <com.generator.system.core.main.StarWebApplication>  INFO [main]: db连接正常关闭
+10:52:08,651 <com.generator.system.core.main.StarWebApplication>  INFO [main]: Started StarWebApplication in 11.21 seconds (JVM running for 11.995)
+10:55:49,925 <com.generator.system.core.main.StarWebApplication>  INFO [main]: Starting StarWebApplication on AAA with PID 884 (started by arthur in D:\Workspaces\MyEclipse 2015\spring-boot-sample-web-jsp)
+10:55:49,927 <com.generator.system.core.main.StarWebApplication>  INFO [main]: The following profiles are active: dev
+10:56:00,482 <com.generator.system.core.main.StarWebApplication>  INFO [main]: 当前环境: dev_envrimont
+10:56:00,482 <com.generator.system.core.main.StarWebApplication>  INFO [main]: db连接正常关闭
+10:56:00,484 <com.generator.system.core.main.StarWebApplication>  INFO [main]: Started StarWebApplication in 10.992 seconds (JVM running for 11.78)
+11:09:17,207 <com.generator.system.core.main.StarWebApplication>  INFO [main]: Starting StarWebApplication on AAA with PID 14748 (started by arthur in D:\Workspaces\MyEclipse 2015\spring-boot-sample-web-jsp)
+11:09:17,208 <com.generator.system.core.main.StarWebApplication>  INFO [main]: The following profiles are active: dev
+11:09:28,663 <com.generator.system.core.main.StarWebApplication>  INFO [main]: 当前环境: dev_envrimont
+11:09:28,663 <com.generator.system.core.main.StarWebApplication>  INFO [main]: db连接正常关闭
+11:09:28,665 <com.generator.system.core.main.StarWebApplication>  INFO [main]: Started StarWebApplication in 11.876 seconds (JVM running for 13.411)
+11:51:40,233 <com.generator.system.core.main.StarWebApplication>  INFO [main]: Starting StarWebApplication on AAA with PID 14572 (started by arthur in D:\Workspaces\MyEclipse 2015\spring-boot-sample-web-jsp)
+11:51:40,236 <com.generator.system.core.main.StarWebApplication>  INFO [main]: The following profiles are active: dev
+11:51:50,440 <com.generator.system.core.main.StarWebApplication>  INFO [main]: 当前环境: dev_envrimont
+11:51:50,441 <com.generator.system.core.main.StarWebApplication>  INFO [main]: db连接正常关闭
+11:51:50,442 <com.generator.system.core.main.StarWebApplication>  INFO [main]: Started StarWebApplication in 10.643 seconds (JVM running for 11.449)

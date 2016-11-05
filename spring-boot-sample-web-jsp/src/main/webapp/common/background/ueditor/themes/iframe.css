@@ -1,0 +1,26 @@
+/*可以在这里添加你自己的css*/
+
+.de-box{ width: 100%; display: inline-block;}
+.de-bt{ width: 100%; height: 40px; line-height: 40px; border-bottom: 2px solid #ccc;}
+.de-btc{ float: left; font-size: 18px; color: #333; font-weight: bold; margin-left: 10px;}
+.de-bc{ width: 100%; display: inline-block; line-height: 18px; font-size: 14px; color: #666; background: #f0f0f0; margin-bottom: 15px;}
+.de-row{ width: 100%; display: inline-block; float: left; border-bottom: 1px solid #ddd;}
+.de-rowt{ width: 130px; padding: 10px; float: left; font-weight: bold;}
+.de-rowc{ margin: 0 0 0 150px; padding: 10px; min-height: 18px; background: #fff; border-left: 1px solid #ddd;}
+.de-rowd{ line-height: 22px;}
+.de-bt2{ width: 100%; border-left: 4px solid #f7531a; height: 40px; line-height: 40px; background: #eee; margin: 10px 0;}
+.de-btc2{ float: left; font-size: 16px; color: #333; font-weight: bold; margin-left: 10px;}
+.de-table{ width: 100%; display: inline-block; line-height: 18px; font-size: 14px; color: #666; background: #f0f0f0; margin-bottom: 15px;}
+.de-tr{ width: 100%; display: inline-block; float: left; border-bottom: 1px solid #ddd;}
+.de-td1{ width: 180px; padding: 10px; float: left; font-weight: bold;}
+.de-td2{ width: 80px; padding: 10px; float: left; border-left: 1px solid #ddd;}
+.de-td3{ width: 100px; padding: 10px; float: left; border-left: 1px solid #ddd;}
+.de-td4{ padding: 10px; float: right;}
+.de-tc{ width: 100%; display: inline-block; float: left; border-bottom: 1px solid #ddd; background: #fff;}
+.de-tc .de-td3{ text-decoration: line-through;}
+.de-td4 strong,.de-td4 b{ color: #f7531a;}
+.de-xq{ width: 100%; display: inline-block; line-height: 22px; font-size: 14px; color: #666; margin-bottom: 15px;}
+.de-xq p{ padding:0 10px 10px;}
+.de-wz{ padding: 0 10px 10px;}
+.de-pic{ width: 100%; float: left; display: inline-block;}
+.de-pic img{ width: 570px;}

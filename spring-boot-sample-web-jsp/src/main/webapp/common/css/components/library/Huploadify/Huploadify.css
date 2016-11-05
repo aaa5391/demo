@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+.uploadify-button{
+	-moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap; 
+    background-color: #ffffff;
+    border-color: #bbbbbb;
+    color: #4d4d4d;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    text-shadow:none;
+    -webkit-box-shadow:none !important;
+   
+}
+.uploadify-button:hover{
+	background-color:#e5e5e5;
+    color: #4d4d4d;
+    border-color: #bbbbbb;
+}
+.delfilebtn:hover{
+	background: none;
+    color: #cc3a3a;
+    border-color: #ac2925;
+}
+.uploadfile{
+	width:0;
+	}
+.uploadify-queue .uploadify-queue-item{
+	list-style-type:none;
+	margin-top:10px;
+	}
+.uploadbtn,.delfilebtn{
+	-moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 4px 8px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap; 
+    background-color: #cc3a3a;
+    border-color: #cc3a3a;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    text-shadow:none;
+    -webkit-box-shadow:none !important;
+    font-family: inherit;
+    margin-left:10px;
+	}
+.up_filename,.progressnum,.uploadbtn,.up_percent{
+	font-size:14px;
+	color:#666;
+	margin-left:10px;
+	font-family: Microsoft YaHei;
+	}
+.uploadify-progress{
+	 display:inline-block; 
+	 width:30%; 
+	 height:20px; 
+	 background-color:white;
+	 
+	 border:1px solid #A8A7A7;
+	 vertical-align:middle;
+	 padding:0;
+	 overflow: hidden;
+	 }
+.uploadify-progress-bar{
+	width:0;
+	height:100%;
+	/* border-radius:20px; */
+	background-color: #0099FF;
+	}
