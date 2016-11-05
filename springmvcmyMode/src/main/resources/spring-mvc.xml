@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+        xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+         http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+  <mvc:default-servlet-handler/>
+
+  <!--RequestMappingHandlerAdapter-->
+  <mvc:annotation-driven>
+    <mvc:message-converters>
+    <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+      <property name="supportedMediaTypes" value = "text/plain;charset=UTF-8" /><!-- @ResponseBody 中文乱码 -->
+    </bean>
+      <ref bean="marshallingHttpMessageConverter"/>
+      <ref bean="mappingJackson2HttpMessageConverter"/>
+      
+    </mvc:message-converters>
+  </mvc:annotation-driven>
+
+
+  <context:component-scan base-package="com.free.*.controller"/>
+  <mvc:annotation-driven validator="validator"/>
+	<aop:aspectj-autoproxy/> 
+	
+<!-- 以下 validator  ConversionService 在使用 mvc:annotation-driven 会 自动注册-->  
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">  
+	    <property name="providerClass" value="org.hibernate.validator.HibernateValidator"/>  
+	    <!-- 如果不加默认到 使用classpath下的 ValidationMessages.properties -->  
+	    <property name="validationMessageSource" ref="messageSource"/>  
+	</bean>
+  <bean id="stringHttpMessageConverter"
+        class="org.springframework.http.converter.StringHttpMessageConverter"    />
+       
+       
+
+  <bean id="marshallingHttpMessageConverter"
+        class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">
+    <property name="marshaller" ref="castorMarshaller"/>
+    <property name="unmarshaller" ref="castorMarshaller"/>
+  </bean>
+
+  <bean id="mappingJackson2HttpMessageConverter"
+        class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+    <property name="supportedMediaTypes">
+      <list>
+        <value>application/json</value>
+        <value>application/xml</value>
+        <value>text/html</value>
+        <value>text/plain</value>
+        <value>text/xml</value>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="castorMarshaller" class="org.springframework.oxm.castor.CastorMarshaller"/>
+  <!--信息转换 - 结束-->
+
+  <bean id="contentNegotiationManagerFactoryBean"
+        class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+    <property name="defaultContentType" value="text/html"/>
+    <property name="ignoreAcceptHeader" value="true"/>
+    <property name="favorPathExtension" value="true"/>
+    <property name="favorParameter" value="false"/>
+    <property name="mediaTypes">
+      <map>
+        <entry key="atom" value="application/atom+xml"/>
+        <entry key="html" value="text/html"/>
+        <entry key="json" value="application/json"/>
+      </map>
+    </property>
+  </bean>
+
+  <!--内容协商-->
+  <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+    <property name="contentNegotiationManager">
+      <bean class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+        <property name="defaultContentType" value="text/html"/>
+        <property name="mediaTypes">
+          <map>
+            <entry key="json" value="application/json"/>
+            <entry key="xml" value="application/xml"/>
+            <entry key="html" value="text/html"/>
+          </map>
+        </property>
+      </bean>
+    </property>
+    <property name="viewResolvers">
+      <list>
+        <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+          <property name="prefix" value="/WEB-INF/jsp/"/>
+          <property name="suffix" value=""/>
+        </bean>
+      </list>
+    </property>
+    <property name="defaultViews">
+      <list>
+        <bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"/>
+        <bean class="org.springframework.web.servlet.view.xml.MarshallingView">
+          <property name="marshaller" ref="castorMarshaller"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+
+  <!--国际化-->
+  <bean id="messageSource"
+        class="org.springframework.context.support.ResourceBundleMessageSource">
+    <property name="defaultEncoding" value="UTF-8"/>
+    <property name="basenames">
+      <list>
+        <value>messages.welcome</value>
+      </list>
+    </property>
+  </bean>
+
+	<!-- 支持上传文件 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="utf-8"></property>
+		<property name="maxUploadSize" value="10485760000"></property>
+		<property name="maxInMemorySize" value="40960"></property>
+	</bean>
+ 
+
+</beans>

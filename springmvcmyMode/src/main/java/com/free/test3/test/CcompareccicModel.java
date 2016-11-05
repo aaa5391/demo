@@ -1,0 +1,59 @@
+package com.free.test3.test;
+import java.io.Serializable;
+import java.sql.Clob;
+import java.util.Date;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import javax.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement (name = "modes") //生成的时候取这个名字
+
+public class CcompareccicModel<T>  {
+
+
+	private MsgModel msg;//对象生成
+	
+	private List<T> data;//list的生成
+	
+	private String rybh;
+	/** 姓名  可空    */
+  
+	private String xm;
+	/**   可空    */
+	public MsgModel getMsg() {
+		return msg;
+	}
+	@XmlElement(name = "Msg")
+	public void setMsg(MsgModel msg) {
+		this.msg = msg;
+	}
+	public String getRybh() {
+		return rybh;
+	}
+	public void setRybh(String rybh) {
+		this.rybh = rybh;
+	}
+	public String getXm() {
+		return xm;
+	}
+	public void setXm(String xm) {
+		this.xm = xm;
+	}
+	public List<T> getData() {
+		return data;
+	}
+	
+	@XmlElementWrapper(name = "List")
+	public void setData(List<T> data) {
+		this.data = data;
+	}
+   
+}
+
